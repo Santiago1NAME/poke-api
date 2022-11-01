@@ -27,7 +27,7 @@ const Pokemons = () =>{
         <section className="section-sub-main">
           <div className="container">
             <Routes>
-              <Route path="/" element={<HomePokemones />}/>
+              <Route path="/" element={<HomePokemones setCapturado={ setCapturado } setPokemonCapturado={ setPokemonCapturado }/>}/>
               <Route path="type" element={ <TypesPokemons /> } />
               <Route path="/type/:pokemonid"  element={ <TypePokemons  setCapturado={ setCapturado } setPokemonCapturado={ setPokemonCapturado }/> } />
             </Routes>

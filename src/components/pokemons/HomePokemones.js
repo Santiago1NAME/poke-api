@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CardPokemons from "./CardPokemons";
 
-const MainPokemones = () =>{
+const MainPokemones = ({ setCapturado, setPokemonCapturado }) =>{
     const [pokemones, setPokemones] = useState([]);
 
     const getPokemons = async () => {
@@ -27,7 +27,7 @@ const MainPokemones = () =>{
             <div className="cards-pokemons">
                 {pokemones.map((pokemon, index) => {
                     return (
-                    <CardPokemons key={ pokemon.id } pokemon={ pokemon }/>
+                    <CardPokemons key={ pokemon.id } pokemon={ pokemon } setCapturado={ setCapturado } setPokemonCapturado={ setPokemonCapturado }/>
                     )
                 })}
             </div>

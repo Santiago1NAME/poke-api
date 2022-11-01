@@ -87,7 +87,6 @@ code {
   padding: 15px 15px;
   border-radius: 10px;
   color: #424d52;
-  font-weight: bold;
   text-decoration: none;
   transition: all 1.5s;
 }
@@ -140,6 +139,7 @@ code {
   display: block;
   text-align: center;
   font-family: 'Fredoka One', cursive;
+  font-size: 40px;
 }
 
 .cards-pokemons{
