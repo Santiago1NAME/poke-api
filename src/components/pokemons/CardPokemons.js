@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Pokeball from "../../assets/img/pokeball.svg";
 
 const CardPokemons = ({ pokemon, setCapturado, setPokemonCapturado }) =>{

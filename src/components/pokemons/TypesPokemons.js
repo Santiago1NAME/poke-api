@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink, Link, useParams, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -25,7 +25,7 @@ const TypesPokemons = () =>{
     return (
         <div className="">
             <li>
-                <NavLink end className="nav-option-sidebar" to="/pokemones">Todos</NavLink>
+                <NavLink end className="nav-option-sidebar" to="/pokemones">Inicio</NavLink>
             </li>
             {
                 types.map((type, index) =>{

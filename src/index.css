@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@100;200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Fredoka One', cursive;
 }
 
 body {
@@ -133,6 +134,14 @@ code {
   margin-bottom: 30px;
 }
 
+.title-pokemons{
+  width: 100%;
+  padding: 60px 0 0 0;
+  display: block;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+}
+
 .cards-pokemons{
   display: grid;
   width: 100%;
@@ -158,8 +167,8 @@ code {
 }
 
 .card-pokemon .name-pokemon{
-  font-size: 40px;
-  font-family: 'Rubik Marker Hatch', cursive;
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
 }
 
 .options-sidebar{
