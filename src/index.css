@@ -360,3 +360,17 @@ code {
     bottom: 0;
   }
 }
+
+
+@media only screen and (max-width: 320px) {
+  .section-main{
+    grid-area: main;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "sidebar"
+    "mainsidebar";
+    grid-template-columns: 100%;
+    position: relative;
+  }
+}
