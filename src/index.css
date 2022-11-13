@@ -30,12 +30,13 @@ code {
 .page{
   display: grid;
   grid-template-areas:
-  "header header"
-  "main main"
-  "footer footer";
+  "header"
+  "main"
+  "footer";
 }
 
 .header{
+  position: fixed;
   grid-area: header;
   width: 100%;
   height: 70px;
@@ -45,6 +46,7 @@ code {
 .main{
   grid-area: main;
   width: 100%;
+  margin-top: 70px;
 }
 
 .section-main{
@@ -73,7 +75,6 @@ code {
 }
 
 .nav-header{
-  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
@@ -169,6 +170,7 @@ code {
 .card-pokemon .name-pokemon{
   font-size: 30px;
   font-family: 'Fredoka One', cursive;
+  text-align: center;
 }
 
 .options-sidebar{
@@ -339,6 +341,35 @@ code {
   animation-timing-function: ease-out;
 }
 
+.hamburger{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
+.hamburger .line{
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  margin-block: 10px;
+  border-radius: 4px;
+  transition: transform 1.5s;
+}
+
+.hamburger.active .line:nth-child(1){
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3){
+  transform: translateY(-13px) rotate(-45deg);
+}
+
 @keyframes pokeball {
   0%{
     transform: rotate(0deg);
@@ -363,6 +394,10 @@ code {
 
 
 @media only screen and (max-width: 320px) {
+  .header{
+    background-color: #e84e4a;
+    width: 100%;
+  }
   .section-main{
     grid-area: main;
     margin: 0 auto;
@@ -372,5 +407,78 @@ code {
     "mainsidebar";
     grid-template-columns: 100%;
     position: relative;
+  }
+  .cards-pokemons{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-gap: 1rem 1rem;
+  }
+  .sidebar{
+    height: 350px;
+  }
+  .nav-types{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .options-sidebar ul li a{
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 12px;
+  }
+  .pagination-button{
+    width: 35px;
+    height: 35px;
+  }
+  .pagination{
+    margin: 0;
+  }
+  .pagination-mid p,
+  .pagination-mid input{
+    font-size: 10px;
+  }
+  .card-pokemon .name-pokemon{
+    font-size: 15px;
+    text-align: center;
+  }
+  .capturado-pokemon h1{
+    font-size: 32px;
+  }
+  .capt-pokemon{
+    width: 100px;
+  }
+
+  .nav-header{
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0);
+    transition: all 1.5s ease-in-out;
+  }
+
+  .buttons-left,
+  .buttons-rigth{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .nav-header.active{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: scale(1);
+    transition: all 1.5s ease-in-out;
+  }
+  .logo-header{
+    height: 40%;
+  }
+  .logo-pokeball{
+    width: 70px;
+    height: 70px;
+    top: 0;
+  }
+  .hamburger{
+    display: block;
   }
 }

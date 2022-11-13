@@ -23,7 +23,7 @@ const TypesPokemons = () =>{
     }, []);
 
     return (
-        <div className="">
+        <div className="nav-types">
             <li>
                 <NavLink end className="nav-option-sidebar" to="/pokemones">Inicio</NavLink>
             </li>

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 import Pokeball from "./assets/img/pokeball.svg";
 import Pokemons from "./components/pokemons/Pokemons";
 import { useParams  } from 'react-router-dom';
@@ -21,6 +22,13 @@ const Prueba2 = () =>{
 }
 
 const App = () => {
+
+  const toggleMenu = () =>{
+    const menu = document.querySelector('.nav-header');
+    const hamburger = document.querySelector('.hamburger');
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  }
   return (
     <div className="page">
       <header className="header">
@@ -39,6 +47,11 @@ const App = () => {
             <NavLink end className="nav-option-header" to="/botonr3">Boton 3</NavLink>
           </div>
         </nav>
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </header>
       <main className="main">
         <div className="container">
