@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import Pokeball from "./assets/img/pokeball.svg";
 import Pokemons from "./components/pokemons/Pokemons";
 import { useParams  } from 'react-router-dom';
+import Home from "./components/pokemons/Home";
 
 const Prueba1 = () =>{
   let { userId } = useParams();
@@ -33,7 +34,7 @@ const App = () => {
       <header className="header">
         <nav className="nav-header">
           <div className="buttons-left">
-            <NavLink end className="nav-option-header" to="/pokemones">Boton 1</NavLink>
+            <NavLink end className="nav-option-header" to="/pokemones">Pokemones</NavLink>
             <NavLink end className="nav-option-header" to="/botonl2">Boton 2</NavLink>
             <NavLink end className="nav-option-header" to="/botonl3">Boton 3</NavLink>
           </div>
@@ -55,13 +56,14 @@ const App = () => {
       <main className="main">
         <div className="container">
           <Routes>
+            <Route exact path="/" element={<Home />} />
             <Route exact path="/pokemones" element={<Pokemons />}>
               <Route path="type" />
               <Route path="type/:pokemonid" />
             </Route>
             <Route exact path="/botonl2" element={<Prueba1 />} />
             <Route exact path="/botonl3" element={<Prueba2 />} />
-            <Route exact path="*" element={<Pokemons />} />
+            <Route exact path="*" element={<Home />} />
           </Routes>
         </div>
       </main>

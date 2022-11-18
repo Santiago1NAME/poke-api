@@ -49,6 +49,17 @@ code {
   margin-top: 70px;
 }
 
+.home-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+}
+
+.home-page h1{
+  font-size: 150px;
+}
+
 .section-main{
   grid-area: main;
   margin: 0 auto;
@@ -405,6 +416,9 @@ code {
     background-color: #e84e4a;
     width: 100%;
   }
+  .home-page h1{
+    font-size: 120px;
+  }
   .section-main{
     grid-area: main;
     margin: 0 auto;
@@ -494,6 +508,9 @@ code {
   .header{
     background-color: #e84e4a;
     width: 100%;
+  }
+  .home-page h1{
+    font-size: 60px;
   }
   .section-main{
     grid-area: main;
