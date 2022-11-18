@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Pokeball from "./assets/img/pokeball.svg";
 import Pokemons from "./components/pokemons/Pokemons";
 import { useParams  } from 'react-router-dom';

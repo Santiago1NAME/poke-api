@@ -34,7 +34,7 @@ const Pokemons = () =>{
           </div>
         </section>
         {
-          capturado == true &&
+          capturado === true &&
             <div className="capturado-pokemon">
               <h1 className="title-pokemons">Has capturado un { pokemonCapturado }</h1>
               <div className="animation-pokeball">

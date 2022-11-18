@@ -392,8 +392,105 @@ code {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .cards-pokemons{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-gap: 1rem 1rem;
+  }
+}
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
+  .header{
+    background-color: #e84e4a;
+    width: 100%;
+  }
+  .section-main{
+    grid-area: main;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "sidebar"
+    "mainsidebar";
+    grid-template-columns: 100%;
+    position: relative;
+  }
+  .cards-pokemons{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-gap: 1rem 1rem;
+  }
+  .sidebar{
+    height: 270px;
+  }
+  .nav-types{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .options-sidebar ul li a{
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 12px;
+  }
+  .pagination-button{
+    width: 35px;
+    height: 35px;
+  }
+  .pagination{
+    margin: 0;
+  }
+  .pagination-mid p,
+  .pagination-mid input{
+    font-size: 10px;
+  }
+  .card-pokemon .name-pokemon{
+    font-size: 15px;
+    text-align: center;
+  }
+  .capturado-pokemon h1{
+    font-size: 32px;
+  }
+  .capt-pokemon{
+    width: 100px;
+  }
+
+  .nav-header{
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0);
+    transition: all 1.5s ease-in-out;
+  }
+
+  .buttons-left,
+  .buttons-rigth{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .nav-header.active{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: scale(1);
+    transition: all 1.5s ease-in-out;
+  }
+  .logo-header{
+    height: 40%;
+  }
+  .logo-pokeball{
+    width: 70px;
+    height: 70px;
+    top: 0;
+  }
+  .hamburger{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 420px) {
   .header{
     background-color: #e84e4a;
     width: 100%;
@@ -418,7 +515,7 @@ code {
   }
   .nav-types{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
   }
   .options-sidebar ul li a{
     padding: 0;
